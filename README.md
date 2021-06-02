@@ -1,8 +1,11 @@
 # glpi-uspoauth
 Gambiarra para fazer o GLPI autenticar no USP oAuth. Um dia vira plugin
 
+&nbsp;
 
-Testado na versão 9.5.4 do GLPI
+**Testado na versão 9.5.4 do GLPI**
+
+&nbsp;
 
 Para usar a autenticação do USP oAuth com o GLPI faça o seguinte:
 
