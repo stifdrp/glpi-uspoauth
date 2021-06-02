@@ -10,16 +10,16 @@ Para usar a autenticação do USP oAuth com o GLPI faça o seguinte:
 
 - Entrar na pasta do GLPI e clonar o projeto
 
-'''
+```
 git clone git@github.com:stifdrp/glpi-uspoauth.git
-'''
+```
  
 - Inserir no index.php do GLPI, o código abaixo depois do botão de login
 ~~~php 
 require_once ('glpi-uspoauth/botao-login.php');
 ~~~
 
-![Código inserido](https://drive.google.com/file/d/12qIsk2z1VMekl1pN4WvoYoNXoi1rHFuJ/view?usp=sharingg)
+![Código inserido](https://github.com/stifdrp/readme-images/blob/main/insert-code-glpi-uspoauth.png?raw=true)
 
 
 - Criar uma cópia do config_example.php para config.php e setar as variáveis do seu ambiente
