@@ -20,7 +20,10 @@ if($vinculo) {
     
     //Criação da senha
     $passwd_glpi = $loginUSP["loginUsuario"].$passwd_salt.explode(" ",$loginUSP["nomeUsuario"])[0];
-    
+
+    //Tratar e-mail vazio
+    isset($loginUSP["emailUspUsuario"]) ? $email = $loginUSP["emailUspUsuario"] : $email = $loginUSP["emailPrincipalUsuario"];
+   
     //Array enviado pelo formulario "Adicionar usuário"
     $dadosUsuario = array(
         'name' => $loginUSP["loginUsuario"],				
@@ -30,7 +33,7 @@ if($vinculo) {
         'password2' => $passwd_glpi,			
         'is_active' => '1',		
         '_useremails' => array(
-            $loginUSP["emailUspUsuario"]
+            $email
         ),
         'begin_date' => '',
         'end_date' => '',
