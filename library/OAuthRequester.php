@@ -470,7 +470,7 @@ class OAuthRequester extends OAuthRequestSigner
 		// first line of headers is the HTTP response code 
 		$http_line = array_shift($lines);
 		
-		// NA MÁQUINA DE DESENNVOLVIMENTO USAR A VARIÁVEL $regex_http_2
+		//ALTERADO REGRA DE REGEX PARA PERMITIR HTTP2
 		$regex_http_1dot1 = '@^HTTP/[0-9]\.[0-9] +([0-9]{3})@';
 		$regex_http_2 = '@^HTTP/[0-9][\.]?[0-9]? +([0-9]{3})@';
 		
