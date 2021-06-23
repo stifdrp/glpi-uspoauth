@@ -158,7 +158,6 @@ class OAuthRequester extends OAuthRequestSigner
 		$oauth 	= new OAuthRequester($uri, $method, $params);
 		$oauth->sign($usr_id, $r, '', 'requestToken');
 		$text	= $oauth->curl_raw($curl_options);
-
 		if (empty($text))
 		{
 			throw new OAuthException2('No answer from the server "'.$uri.'" while requesting a request token');
@@ -471,11 +470,11 @@ class OAuthRequester extends OAuthRequestSigner
 		// first line of headers is the HTTP response code 
 		$http_line = array_shift($lines);
 		
+		// NA MÁQUINA DE DESENNVOLVIMENTO USAR A VARIÁVEL $regex_http_2
 		$regex_http_1dot1 = '@^HTTP/[0-9]\.[0-9] +([0-9]{3})@';
 		$regex_http_2 = '@^HTTP/[0-9][\.]?[0-9]? +([0-9]{3})@';
 		
-		//NA MÁQUINA DE DESENNVOLVIMENTO USAR A VARIÁVEL $regex_http_2
-		if (preg_match($regex_http_1dot1, $http_line, $matches))
+		if (preg_match($regex_http_2, $http_line, $matches))
 		{
 			$code = $matches[1];
 		}
