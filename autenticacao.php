@@ -55,6 +55,7 @@ if($vinculo) {
     Auth::redirectIfAuthenticated();
 }
 else{
-    echo "Você não pertence à unidade";
+    //Se achar necessário crie um novo código de erro no index.php do GLPI na linha 211
+    $url_app = $url_app."?redirect=1&error=3";
     header("Location: $url_app");
 }
